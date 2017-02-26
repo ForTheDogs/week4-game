@@ -1,0 +1,42 @@
+
+header{
+	text-align: center;
+	background-color: rgb(23,35,135);
+	color: silver;
+	margin-top: 10px;
+	font-size: 80px;
+
+}
+
+#btnStyle{
+	background-color: rgb(23,35,135);
+	color: silver;
+	max-width: 540px;
+
+}
+
+#text{
+	max-width: 540px;
+	background-color: silver;
+	color: rgb(23,35,135);
+}
+
+#crystal1{
+	background-color: yellow;
+	float: left;
+}
+
+#crystal2{
+	background-color: black;
+	float: left;
+}
+
+#crystal3{
+	background-color: orange;
+	float: left;
+}
+
+#crystal4{
+	background-color: blue;
+	float: left;
+}
