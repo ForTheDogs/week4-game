@@ -1,6 +1,6 @@
-	$(document).html(function()){
+	$(document).ready(function(){
 
-	var random= Mathfloor(Mathrandom()* 101 + 19)
+	var random = Math.floor(Math.random()* 101 + 19)
 		console.log(random)
 		$('#number').html(random);
 
@@ -8,6 +8,8 @@
 	var total= 0;
 	var Wins= 0;
 	var Losses= 0;
+	
+
 
 	$('#numberWins').html(Wins);
 	$('#numberLosses').html(Losses);
@@ -18,10 +20,11 @@
 			generatedNumbers.push(num);
 		}
 		 console.log(generatedNumbers);
+	}	
 
 	fourRandomNumbers();
 		function reset(){
-			random=Math.floor(Math.random() * 101 + 19);
+			random = Math.floor(Math.random() * 101 + 19);
 			console.log(random);
 		 $('#number').html(random);
 		 generatedNumbers= [];
@@ -40,7 +43,7 @@
 			   reset();	
 		}	 
 
-		function Losses(){
+		function Loser(){
 			alert("You Lose!");
 				Losses++
 
@@ -48,7 +51,7 @@
 				reset();	
 		}
 
-		$('#crystal1').on('click',function()){
+		$('#crystal1').on('click',function(){
 			total= total + generatedNumbers [0];
 			console.log("newTotal=" + total);
 			$('#combined').html(total);
@@ -62,8 +65,8 @@
 
 		})
 
-		$('#crystal2').on('click',function()){
-			total= total + generatedNumbers [0];
+		$('#crystal2').on('click',function(){
+			total= total + generatedNumbers [1];
 			console.log("newTotal=" + total);
 			$('#combined').html(total);
 				if(total===random){
@@ -75,8 +78,8 @@
 				}
 		})
 
-		$('#crystal3').on('click',function()){
-			total= total + generatedNumbers [0];
+		$('#crystal3').on('click',function(){
+			total= total + generatedNumbers [2];
 			console.log("newTotal=" + total);
 			$('#combined').html(total);
 				if(total===random){
@@ -88,8 +91,8 @@
 				}
 		})
 
-		$('#crystal4').on('click',function()){
-			total= total + generatedNumbers [0];
+		$('#crystal4').on('click',function(){
+			total= total + generatedNumbers [3];
 			console.log("newTotal=" + total);
 			$('#combined').html(total);
 				if(total===random){
@@ -100,5 +103,5 @@
 					Loser();
 				}
 		})			
-	}	
-}
+	
+})
